@@ -69,3 +69,14 @@ func BenchmarkAppend50To50SliceCapacity(b *testing.B) {
 
 	// BenchmarkAppend50To50SliceCapacity-10    	27602334	        42.82 ns/op	       0 B/op	       0 allocs/op
 }
+
+func BenchmarkAppend50To20SliceCapacity(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		s := make([]string, 0, 20)
+		for i := 0; i < 50; i++ {
+			s = append(s, "more important data")
+		}
+	}
+
+	// BenchmarkAppend50To20SliceCapacity-10    	 4560397	       270.1 ns/op	    1920 B/op	       2 allocs/op
+}
