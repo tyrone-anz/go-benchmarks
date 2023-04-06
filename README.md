@@ -8,5 +8,5 @@
 ## Learnings
 
 - Avoid use of fmt.Sprintf, use static strings
-- Add capacity to slices
+- Add capacity to slices and maps
 - Having | on regex pattern seems not better compared to multiple pattern matching
